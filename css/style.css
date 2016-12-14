@@ -1,0 +1,420 @@
+/**********************GLOBALES**************************/
+
+@font-face {
+    font-family: americanCaptain;
+    src: url(../fonts/American-Captain.ttf);
+}
+
+@font-face {
+    font-family: avenirRoman;
+    src: url(../fonts/avenir-roman.ttf);
+}
+
+/**********************GLOBALES**************************/
+
+html, body, #wrapper, #header, #content, #footer, .width-full{
+	margin:0;
+}
+
+#wrapper, #header, #block, #footer, .width-full{
+	width:100%;
+}
+
+.width-default{
+	width:1000px;
+	margin: auto;
+	padding: 10px;
+	background: rgba(255,255,255,0.7);
+}
+
+#wrapper{
+	background: url('../image/fondo.jpg') repeat-y center top;
+}
+
+label{
+	font-family: americanCaptain;
+	color: #5f5d5e;
+}
+
+h1, h2, h3{
+	font-family: americanCaptain;
+}
+
+h1{
+	font-size: 98px;
+}
+
+h2{
+	font-size: 65px;
+	line-height: 0.9;
+}
+
+h3{
+	font-size: 42px;
+	text-transform: uppercase;
+}
+
+p{
+	font-family:avenirRoman;
+	color: #383838;
+	font-size: 21px;
+}
+
+.space{
+	width:100%;
+	height:50px;
+}
+
+.txt-azul{
+	color:#000068;
+}
+
+.txt-rojo{
+	color: #fc3130;
+}
+
+.txt-blanco{
+	color: #ffffff !important;
+}
+/************************HEADER*************************/
+#header{
+	height:135px;
+	overflow: hidden;
+}
+
+#logo{
+	width: 240px;
+	height: 135px;
+	text-align: center;
+	padding-top: 55px;
+	float:left;
+}
+
+#header #content-menu{
+	width:738px;
+	height:135px;
+	float:left;
+}
+
+#header #content-menu #header-social{
+	width:100%;
+	height: 55px;
+}
+
+#header-social ul{
+	list-style: none;
+	margin: 2px 12px 0 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#header-social ul li{
+	margin: 0;
+    display: block;
+    float: right;
+    margin-left: 35px;
+}
+
+#content-menu #menu ul{
+	list-style: none;
+	margin:0;
+	padding: 0;
+	float:right;
+}
+
+#content-menu #menu ul li{
+	font-family: americanCaptain;
+	text-transform: uppercase;
+	display: block;
+	float: left;
+	font-size: 44px;
+    margin: 0 10px;
+}
+
+#content-menu #menu ul li a{
+    color:#00005c;
+}
+
+#content-menu #menu ul li a:hover{
+    color:#ff0000;
+    text-decoration: none;
+}
+
+#content-menu #menu ul li a.active{
+	color:#ff0000;
+}
+
+#header #content-menu #menu{
+	width:100%;
+	height: 76px;
+}
+
+.texto-banner{
+	position: absolute;
+	text-align: justify;
+	width: 960px;
+	margin-left: auto;
+    margin-right: auto;
+	left: 0;
+    right: 0;
+}
+
+.banner{
+	text-align: center;
+}
+
+.banner img{
+	width:100%;
+}
+
+.texto-banner .titulo-banner h2{
+	color:#ececec;
+}
+
+.texto-banner .titulo-banner{
+	width:763px;
+	position: absolute;
+	right:0;
+	margin-top: 485px;
+}
+
+.texto-banner2{
+	position: absolute;
+	text-align: justify;
+	width: 960px;
+	margin-left: auto;
+    margin-right: auto;
+	left: 0;
+    right: 0;
+}
+
+.texto-banner2 .titulo-banner h2, .texto-banner2 .titulo-banner h1{
+	color:#ececec;
+}
+
+.texto-banner2 .titulo-banner{
+	width:820px;
+	position: absolute;
+	right:0;
+}
+
+.top-370{
+	margin-top: 370px;
+}
+
+.top-300{
+	margin-top: 250px;
+}
+
+/************************FOOTER************************/
+#footer{
+	background: #000068;
+	height:245px;
+}
+
+#content-footer{
+	width:1000px;
+	margin: auto;
+	padding: 10px;
+}
+
+#footer #imagen-footer{
+	width:320px;
+	height: 200px;
+	float: left;
+}
+
+#footer #imagen-footer img{
+	margin-top: 75px;
+}
+
+#footer #contacto-footer{
+	width:660px;
+	height:200px;
+	float: left;
+	padding: 10px 0 0 20px;
+}
+
+#footer #contacto-footer .texto{
+	font-family: americanCaptain;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 28px;
+	margin-top:8px;
+}
+#footer #contacto-footer .texto img{
+	vertical-align: baseline;
+	margin-right: 10px;
+}
+
+/************************CONTENT************************/
+.circulo-imagen{
+	width: 190px;
+	height: 190px;
+	margin: auto;
+	background-color: #ff0000;
+	border-radius: 50%;
+	padding: 28px;
+}
+
+.circulo-texto h3{
+	text-transform: uppercase;
+	color: #000072;
+}
+
+.item-servicio{
+	margin: 0 auto 34px;
+    background: #ff3131;
+    height: 332px;
+    width: 96%;
+}
+
+.servicio-texto h3{
+	color: #fff;
+	margin:0;
+}
+
+.servicio-imagen{
+	margin-top: 11px;
+}
+
+.width-1080{
+
+}
+
+#slider1{
+	margin-top: 50px;
+	margin-bottom: 80px;
+}
+
+.servicio{
+	width: 100%;
+	height: 100%;
+	background: #020169;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.imagen-servicio{
+	padding: 10px;
+}
+
+.info-servicio{
+	padding:10px;
+}
+
+.icono-servicio{
+	list-style: none;
+	margin: 20px 20px 0 0;
+	padding: 0;
+}
+
+.icono-servicio li{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.foto-galeria{
+	margin-bottom: 35px;
+}
+
+#mapa-contacto{
+	border: 1px solid gray;
+	width:100%;
+	height:250px;
+}
+
+.form-div{
+	margin-top:15px;
+}
+
+.form-div label{
+	font-size: 40px;
+	margin:0;
+	text-transform: uppercase;
+}
+.form-div textarea{
+	border: 1px solid #ff2f32;
+	width:100%;
+	padding:3px 0 3px 5px;
+	font-family: americanCaptain;
+	font-size: 25px;
+	color: #5f5d5e;
+}
+
+.form-div input{
+	border: 1px solid #ff2f32;
+	width:100%;
+	padding:3px 0 3px 5px;
+	height:40px;
+	font-family: americanCaptain;
+	font-size: 25px;
+	color: #5f5d5e;
+}
+
+.btn-enviar{
+	margin-top:20px;
+	background: #020169;
+	font-family: americanCaptain;
+	font-size: 35px;
+	color: #ffffff;
+	border: 0;
+	padding: 0 60px;
+}
+
+/************************QUERIES************************/
+
+@media only screen and (max-width : 767px) {
+	.texto-banner .titulo-banner{
+		position: relative;
+		padding: 10px;
+		margin-top: 100px;
+		text-align: center;
+	}
+
+	.texto-banner .titulo-banner h2{
+		font-size: 2em;
+	}
+}
+
+@media only screen and (min-width : 768px) {
+	/*.texto-banner .titulo-banner{
+		position: relative;
+		margin-top: 150px;
+	}*/
+
+	/*.texto-banner .titulo-banner h2{
+		font-size: 3em;
+	}*/
+}
+
+@media only screen and (min-width : 992px) {
+	/*.texto-banner .titulo-banner{
+		margin-top: 150px;
+	}*/
+}
+
+@media only screen and (max-width: 991px){
+	.width-default {
+    	width: 100%;
+	}
+}
+
+/*personalizadas*/
+@media (min-width: 1600px) and (max-width : 1880px) {
+	.texto-banner .titulo-banner{
+		margin-top: 380px;
+	}
+}
+
+@media (min-width: 1200px) and (max-width : 1600px) {
+	.texto-banner .titulo-banner{
+		margin-top: 250px;
+	}
+}
+
+/*@media (min-width: 1000px) and (max-width : 1280px) {
+	.texto-banner .titulo-banner{
+		margin-top: 170px;
+	}
+}*/
