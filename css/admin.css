@@ -1,0 +1,131 @@
+.btn-editar{
+	text-align: right;
+}
+
+.btn-editar button{
+	padding: 3px;
+    opacity:0.5;
+    transition: opacity 0.3s;
+}
+
+.btn-editar button:hover{
+	opacity:1;
+}
+
+.editar_texto_input, .editar_texto_area{
+	cursor: pointer;
+	transition: background-color 0.5s;
+}
+
+.editar_texto_input:hover, .editar_texto_area:hover{
+	background-color: #d9cfec;
+}
+
+.inline-block{
+	display: inline-block;
+}
+
+.file_foto{
+    color: transparent;
+}
+
+.file_foto::-webkit-file-upload-button{
+	visibility: hidden;
+}
+
+.file_foto::before {
+  content: url("../image/picture.png");
+  cursor: pointer;
+  float:right;
+  opacity:0.5;
+  transition: opacity 0.3s;
+}
+.file_foto:hover::before {
+  opacity:1;
+}
+
+.edit_red_social{
+  margin-top: 10px;
+  padding: 0 23px;
+}
+
+.file_foto2{
+    /*color: transparent;*/
+    margin-top:10px;
+}
+
+.file_foto2::-webkit-file-upload-button{
+  visibility: hidden;
+}
+
+.file_foto2::before {
+  content: "Subir Imagen";
+  cursor: pointer;
+  opacity:0.5;
+  transition: opacity 0.3s;
+  border: 2px solid #5e4297;
+  color: #5e4297;
+  font-weight: bold;
+  padding-left:20px;
+  padding-right:20px;
+}
+.file_foto2:hover::before {
+  opacity:1;
+}
+
+.contenido_imagen_vacio{
+  width: 100%;
+  height: 250px;
+  background-color: #e6e5e5;
+  border: 3px dashed #c3bdbd;
+}
+
+.btn_guardar_destacados, .btn_guardar_nuevo{
+  border: 2px solid #66438d;
+  padding: 6px 20px;
+  color: #66438d;
+}
+
+#btn_editar_banner{
+  color: #483926;
+  border: 1px solid #c2c3c9;
+  font-family: 'AvenirRegular';
+  padding: 5px 15px;
+  display: inline-block;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+
+.btn_eliminar_banner{
+  position: absolute;
+  border: 1px solid #fff;
+  padding: 9px;
+  margin-left: -20px;
+  color: #2a1650;
+  border-radius: 3px;
+  background-color: rgba(247, 220, 220, 0.5);
+}
+
+#file_imagen_banner{
+  display: none;
+}
+
+.topbar_admin{
+  height: 40px;
+  background-color: #242029;
+  text-align: right;
+}
+
+.topbar_admin div{
+  padding-top: 8px;
+  width: 72em;
+  margin: auto;
+}
+
+.topbar_admin div a{
+  color: #e9daf7;
+  border: 2px solid #d1b7e8;
+  padding: 4px 20px;
+  border-radius: 7px;
+}

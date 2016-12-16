@@ -122,7 +122,7 @@ p{
 	float:right;
 }
 
-#content-menu #menu ul li{
+#content-menu #menu ul li, .menu ul li{
 	font-family: americanCaptain;
 	text-transform: uppercase;
 	display: block;
@@ -131,7 +131,7 @@ p{
     margin: 0 10px;
 }
 
-#content-menu #menu ul li a{
+#content-menu #menu ul li a,.menu ul li a{
     color:#00005c;
 }
 
@@ -140,7 +140,7 @@ p{
     text-decoration: none;
 }
 
-#content-menu #menu ul li a.active{
+#content-menu #menu ul li a.active, .menu ul li a.active{
 	color:#ff0000;
 }
 
@@ -149,53 +149,49 @@ p{
 	height: 76px;
 }
 
-.texto-banner{
-	position: absolute;
-	text-align: justify;
-	width: 960px;
-	margin-left: auto;
-    margin-right: auto;
-	left: 0;
-    right: 0;
+.menu-mobil{
+	display: none;
 }
 
 .banner{
 	text-align: center;
+	height: 630px;
+	width:100%;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
-.banner img{
+.imagen-banner img{
 	width:100%;
 }
 
-.texto-banner .titulo-banner h2{
-	color:#ececec;
-}
-
-.texto-banner .titulo-banner{
-	width:763px;
-	position: absolute;
-	right:0;
-	margin-top: 485px;
-}
-
-.texto-banner2{
-	position: absolute;
-	text-align: justify;
-	width: 960px;
-	margin-left: auto;
-    margin-right: auto;
-	left: 0;
+.banner .content-banner{
+	width: 1000px;
+    height: 630px;
+    margin: auto;
     right: 0;
+    left: 0;
+    position: absolute;
 }
 
-.texto-banner2 .titulo-banner h2, .texto-banner2 .titulo-banner h1{
-	color:#ececec;
-}
-
-.texto-banner2 .titulo-banner{
-	width:820px;
+.titulo-banner{
 	position: absolute;
-	right:0;
+    bottom: 0;
+    right: 0;
+    width: 762px;
+    text-align: justify;
+}
+
+.titulo-banner2{
+	position: absolute;
+    bottom: 110px;
+    right: 0;
+    width: 762px;
+    text-align: justify;
+}
+
+.titulo-banner h2, .titulo-banner h1, .titulo-banner2 h2{
+	color:#ececec;
 }
 
 .top-370{
@@ -229,7 +225,7 @@ p{
 }
 
 #footer #contacto-footer{
-	width:660px;
+	width:600px;
 	height:200px;
 	float: left;
 	padding: 10px 0 0 20px;
@@ -266,7 +262,7 @@ p{
 	margin: 0 auto 34px;
     background: #ff3131;
     height: 332px;
-    width: 96%;
+    width: 296px;
 }
 
 .servicio-texto h3{
@@ -316,10 +312,10 @@ p{
 
 .foto-galeria{
 	margin-bottom: 35px;
+	text-align: center;
 }
 
 #mapa-contacto{
-	border: 1px solid gray;
 	width:100%;
 	height:250px;
 }
@@ -362,59 +358,205 @@ p{
 	padding: 0 60px;
 }
 
+.form-servicio label{
+	font-size: 25px;
+	text-transform: uppercase;
+}
+
+.form-servicio input{
+	color: #5f5d5e;
+}
+
+.form-servicio input{
+	width: 100%;
+	height: 35px;
+	padding: 10px 15px;
+	font-family: americanCaptain;
+	text-transform: uppercase;
+	color: #5f5d5e;
+}
+
+.form-servicio textarea{
+	width: 100%;
+	padding: 10px 15px;
+	font-family: americanCaptain;
+	color: #5f5d5e;
+}
+
+.error{
+	color: red;
+    font-size: 13px !important;
+}
+
+.button-editar{
+	position: absolute;
+	right:25px;
+}
+
+.btn_eliminar_imagen_galeria{
+	position: absolute;
+	right:25px;
+	top:5px;
+}
+
+.item{
+	text-align: center;
+}
+
+.foto-empresa{
+	margin: 10px 0;
+}
+
+.foto-empresa img{
+	width:100%;
+}
+
+.icono-galeria{
+	margin-top:20px;
+	text-align: center;
+}
+
 /************************QUERIES************************/
 
-@media only screen and (max-width : 767px) {
-	.texto-banner .titulo-banner{
-		position: relative;
-		padding: 10px;
-		margin-top: 100px;
+@media (min-width: 769px) and (max-width : 1000px){
+	#header{
+		height:255px;
+		overflow: hidden;
+	}
+
+	#header #content-menu{
+		width:100%;
+		height:135px;
+	}
+}
+
+@media only screen and (max-width : 1000px){
+	.width-default{
+		width:100%;
+	}
+
+	#content-footer{
+		width: 100%;
+	}
+
+	#footer{
+		height: 100%;
+		overflow: hidden;
+	}
+
+	#footer #imagen-footer{
+		width:100%;
+		height: 200px;
 		text-align: center;
 	}
 
-	.texto-banner .titulo-banner h2{
-		font-size: 2em;
+	#footer #contacto-footer{
+		width:100%;
+		text-align: center;
+	}
+
+	#menu ul, #header-social{
+		width: 710px !important;
+		float:none !important;
+		margin: auto !important;
 	}
 }
 
-@media only screen and (min-width : 768px) {
-	/*.texto-banner .titulo-banner{
-		position: relative;
-		margin-top: 150px;
-	}*/
+@media only screen and (max-width : 1000px) {
+	#header #logo{
+		width: 100%;
+		height: 135px;
+		text-align: center;
+	}
 
-	/*.texto-banner .titulo-banner h2{
-		font-size: 3em;
-	}*/
-}
+	.banner .content-banner{
+		width:100% !important;
+	}
 
-@media only screen and (min-width : 992px) {
-	/*.texto-banner .titulo-banner{
-		margin-top: 150px;
-	}*/
-}
-
-@media only screen and (max-width: 991px){
-	.width-default {
-    	width: 100%;
+	.text-center-sm{
+		text-align: center !important;
 	}
 }
 
-/*personalizadas*/
-@media (min-width: 1600px) and (max-width : 1880px) {
-	.texto-banner .titulo-banner{
-		margin-top: 380px;
+@media only screen and (max-width : 768px) {
+	#header #content-menu{
+		display: none;
+	}
+
+	.menu-mobil{
+		display: block;
+	}
+
+	.titulo-banner, .titulo-banner2{
+		width:100% !important;
+		text-align: center;
+	}
+	.titulo-banner h2, .titulo-banner2 h2{
+		font-size: 48px;
+	}
+
+	.titulo-banner h1{
+		font-size: 75px;
+	}
+
+	.banner{
+		height: 500px;
+	}
+
+	.banner .content-banner{
+		height: 425px;
 	}
 }
 
-@media (min-width: 1200px) and (max-width : 1600px) {
-	.texto-banner .titulo-banner{
-		margin-top: 250px;
-	}
+/*****menu*****/
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 240px;
+  height: 100%;
+  transform: translate3d(-240px, 0, 0);
+  transition: transform 0.35s;
+  z-index: 100;
+}
+.menu label.menu-toggle {
+  position: absolute;
+  right: -60px;
+  width: 60px;
+  height: 60px;
+  line-height: 0px;
+  display: block;
+  padding: 0;
+  text-indent: -9999px;
+  background: #fff url(https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png) 50% 50%/25px 25px no-repeat;
+}
+.menu ul li > label {
+  background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-right-b-128.png) 95% 50%/16px 16px no-repeat;
+}
+.menu ul li a, .menu ul li label {
+  display: block;
+  text-align: center;
+  padding: 0 20px;
+  line-height: 60px;
+  text-decoration: none;
+}
+.menu ul li a:hover, .menu ul li label:hover {
+  color: #666;
 }
 
-/*@media (min-width: 1000px) and (max-width : 1280px) {
-	.texto-banner .titulo-banner{
-		margin-top: 170px;
-	}
-}*/
+/* hide inputs */
+.menu-checkbox {
+  display: none;
+}
+
+/* hide navigation icon for sublabels */
+.menu .menu label.menu-toggle {
+  background: none;
+}
+
+/* fade in checked menu */
+.menu-checkbox:checked + .menu {
+  transform: translate3d(0, 0, 0);
+}

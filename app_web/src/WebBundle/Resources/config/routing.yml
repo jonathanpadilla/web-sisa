@@ -31,6 +31,24 @@ web_logout:
     defaults: { _controller: WebBundle:Login:logout }
 
 # FUNCIONE AJAX
+ajax_guardar_servicio:
+    path:     /admin/guardar-servicio/
+    defaults: { _controller: WebBundle:Servicios:guardarServicio }
+    options:
+        expose: true
+
+ajax_eliminar_servicio:
+    path:     /admin/eliminar-servicio/
+    defaults: { _controller: WebBundle:Servicios:eliminarServicio }
+    options:
+        expose: true
+
+ajax_subir_imagen_galeria:
+    path:     /admin/subir-imagen-galeria/
+    defaults: { _controller: WebBundle:Galeria:subirImagen }
+    options:
+        expose: true
+
 ajax_guardar_texto:
     path:     /admin/guardar-texto/
     defaults: { _controller: WebBundle:Admin:guardarTexto }

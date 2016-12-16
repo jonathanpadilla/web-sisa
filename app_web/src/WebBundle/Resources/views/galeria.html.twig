@@ -4,6 +4,10 @@
 Empresa | SISA
 {% endblock %}
 
+{% block css %}
+<link rel="stylesheet" href="{{ absolute_url(asset('js/LightGallery/css/lightgallery.css')) }}">
+{% endblock %}
+
 {% block content %}
 
 <div class="width-default">
@@ -16,91 +20,69 @@ Empresa | SISA
   
   <div class="space"></div>
   
+  {% if session %}
   <div class="row">
-    <div class="col-md-3">
-      <div class="foto-galeria">
-        <img src="{{ absolute_url( asset('image/galeria/galeria-foto1.jpg')) }}" alt="">
-      </div>
+    <div class="col-md-12">
+      <form id="form_subir_imagen" action="{{ url('ajax_subir_imagen_galeria') }}" action="post" enctype="multipart/form-data">
+        <div><label for="">Imagen</label></div>
+        <div><input id="input_imagen_galeria" type="file" name="imagen"></div>
+      </form>
     </div>
+  </div>
+  <div class="space"></div>
+  {% endif %}
+  
+  <div class="row">
+    <div id="galeria">
+      
+      {% for imagen in lista_imagen %}
+      <div class="col-md-3">
+        <div class="foto-galeria">
+          {% if session %}
+          <button class="btn btn-danger btn_eliminar_imagen_galeria" data-id="{{ imagen.id }}">Eliminar</button>
+          {% endif %}
+          <a href="{{ absolute_url( asset('image/uploads/'~imagen.imagen)) }}" class="item">
+            <img src="{{ absolute_url( asset('image/uploads/'~imagen.imagen)) }}" alt="">
+          </a>
+        </div>
+      </div>
+      {% endfor %}
     
-    <div class="col-md-3">
-      <div class="foto-galeria">
-        <img src="{{ absolute_url( asset('image/galeria/galeria-foto1.jpg')) }}" alt="">
-      </div>
     </div>
-    <div class="col-md-3">
-      <div class="foto-galeria">
-        <img src="{{ absolute_url( asset('image/galeria/galeria-foto1.jpg')) }}" alt="">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="foto-galeria">
-        <img src="{{ absolute_url( asset('image/galeria/galeria-foto1.jpg')) }}" alt="">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="foto-galeria">
-        <img src="{{ absolute_url( asset('image/galeria/galeria-foto1.jpg')) }}" alt="">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="foto-galeria">
-        <img src="{{ absolute_url( asset('image/galeria/galeria-foto1.jpg')) }}" alt="">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="foto-galeria">
-        <img src="{{ absolute_url( asset('image/galeria/galeria-foto1.jpg')) }}" alt="">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="foto-galeria">
-        <img src="{{ absolute_url( asset('image/galeria/galeria-foto1.jpg')) }}" alt="">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="foto-galeria">
-        <img src="{{ absolute_url( asset('image/galeria/galeria-foto1.jpg')) }}" alt="">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="foto-galeria">
-        <img src="{{ absolute_url( asset('image/galeria/galeria-foto1.jpg')) }}" alt="">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="foto-galeria">
-        <img src="{{ absolute_url( asset('image/galeria/galeria-foto1.jpg')) }}" alt="">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="foto-galeria">
-        <img src="{{ absolute_url( asset('image/galeria/galeria-foto1.jpg')) }}" alt="">
-      </div>
-    </div>
-
   </div>
 
   <div class="space"></div>
 
   <div class="row">
-    <div class="col-md-2">
-      <img src="{{ absolute_url( asset('image/galeria/icono-galeria1.png')) }}" alt="">
+    <div class="col-md-2 col-sm-4 col-xs-6">
+      <div class="icono-galeria">
+        <img src="{{ absolute_url( asset('image/galeria/icono-galeria1.png')) }}" alt="">
+      </div>
     </div>
-    <div class="col-md-2">
-      <img src="{{ absolute_url( asset('image/galeria/icono-galeria1.png')) }}" alt="">
+    <div class="col-md-2 col-sm-4 col-xs-6">
+      <div class="icono-galeria">
+        <img src="{{ absolute_url( asset('image/galeria/icono-galeria2.png')) }}" alt="">
+      </div>
     </div>
-    <div class="col-md-2">
-      <img src="{{ absolute_url( asset('image/galeria/icono-galeria1.png')) }}" alt="">
+    <div class="col-md-2 col-sm-4 col-xs-6">
+      <div class="icono-galeria">
+        <img src="{{ absolute_url( asset('image/galeria/icono-galeria3.png')) }}" alt="">
+      </div>
     </div>
-    <div class="col-md-2">
-      <img src="{{ absolute_url( asset('image/galeria/icono-galeria1.png')) }}" alt="">
+    <div class="col-md-2 col-sm-4 col-xs-6">
+      <div class="icono-galeria">
+        <img src="{{ absolute_url( asset('image/galeria/icono-galeria4.png')) }}" alt="">
+      </div>
     </div>
-    <div class="col-md-2">
-      <img src="{{ absolute_url( asset('image/galeria/icono-galeria1.png')) }}" alt="">
+    <div class="col-md-2 col-sm-4 col-xs-6">
+      <div class="icono-galeria">
+        <img src="{{ absolute_url( asset('image/galeria/icono-galeria5.png')) }}" alt="">
+      </div>
     </div>
-    <div class="col-md-2">
-      <img src="{{ absolute_url( asset('image/galeria/icono-galeria1.png')) }}" alt="">
+    <div class="col-md-2 col-sm-4 col-xs-6">
+      <div class="icono-galeria">
+        <img src="{{ absolute_url( asset('image/galeria/icono-galeria6.png')) }}" alt="">
+      </div>
     </div>
   </div>
 
@@ -111,5 +93,6 @@ Empresa | SISA
 {% endblock %}
 
 {% block js %}
-
+<script src="{{ absolute_url( asset('js/lightGallery/js/lightgallery.js')) }}"></script>
+<script src="{{ absolute_url( asset('js/galeria.js')) }}"></script>
 {% endblock %}
