@@ -1,8 +1,13 @@
 $(function(){
-
-	$("#slider1").owlCarousel({
-		autoPlay: 3000, //Set AutoPlay to 3 seconds
-		items : 4,
+	
+	$('#slider1').owlCarousel({
+		items: 4,
+        autoplay: true,
+        nav: false,
+        slideSpeed : 1000,
+        autoplaySpeed: 2000,
+        margin: 0,
+        loop: false,
 	});
 
 });

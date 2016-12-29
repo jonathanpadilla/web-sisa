@@ -1,9 +1,14 @@
 $(function(){
 
-    $("#banner_principal").owlCarousel({
-        autoPlay: 3000, //Set AutoPlay to 3 seconds
-        items : 1,
-        pagination: false
-    });
+	$('#banner_principal').owlCarousel({
+		items: 1,
+        autoplay: true,
+        navigation: false,
+        pagination: false,
+        slideSpeed : 1000,
+        autoplaySpeed: 2000,
+        margin: 0,
+        loop: true,
+	});
 
 });
