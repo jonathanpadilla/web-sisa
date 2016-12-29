@@ -192,6 +192,7 @@ p{
 
 .titulo-banner h2, .titulo-banner h1, .titulo-banner2 h2{
 	color:#ececec;
+	text-shadow: 2px 1px 1px grey;
 }
 
 .top-370{
@@ -261,8 +262,8 @@ p{
 .item-servicio{
 	margin: 0 auto 34px;
     background: #ff3131;
-    height: 332px;
-    width: 296px;
+    height: 320px;
+    width: 220px;
 }
 
 .servicio-texto h3{
@@ -272,6 +273,10 @@ p{
 
 .servicio-imagen{
 	margin-top: 11px;
+}
+
+.servicio-imagen img{
+	width: 90%;
 }
 
 .width-1080{
@@ -414,6 +419,22 @@ p{
 .icono-galeria{
 	margin-top:20px;
 	text-align: center;
+}
+
+.foto-galeria a img{
+	width:100%;
+}
+
+.telefono_hover{
+	position: absolute;
+    background-color: #fff;
+    border: 1px solid gray;
+    padding: 2px 18px;
+    font-family: americanCaptain;
+    font-size: 20px;
+    margin-left: -45px;
+    margin-top:50px;
+    display: none;
 }
 
 /************************QUERIES************************/

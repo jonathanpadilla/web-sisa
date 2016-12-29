@@ -31,8 +31,14 @@
 
       <div id="header-social">
         <ul>
-          <li><img src="{{ absolute_url( asset('image/fono.png')) }}" alt="fono"></li>
-          <li><img src="{{ absolute_url( asset('image/facebook.png')) }}" alt="facebook"></li>
+          <li>
+            <div class="telefono_hover">
+              <span>+569 42498863</span>
+            </div>
+            <a href="tel:+56942498863"><img id="btn_fono_head" src="{{ absolute_url( asset('image/fono.png')) }}" alt="fono"></a></li>
+          <li>
+            <a href="#"><img src="{{ absolute_url( asset('image/facebook.png')) }}" alt="facebook"></a>
+          </li>
         </ul>
       </div>
 
@@ -51,9 +57,16 @@
 
 </div>
 
-<div class="width-full">
+<div id="banner_principal" class="width-full">
 
-  <div class="banner" style="background-image: url('{{ absolute_url( asset('image/banner1.jpg')) }}')">
+  <div class="banner item" style="background-image: url('{{ absolute_url( asset('image/banner1.jpg')) }}')">
+    <div class="content-banner">
+      <div class="titulo-banner">
+        <h2>Recargas de aire acondicionario electricidad automotriz - scanner</h2>
+      </div>
+    </div>
+  </div>
+  <div class="banner item" style="background-image: url('{{ absolute_url( asset('image/banner1.jpg')) }}')">
     <div class="content-banner">
       <div class="titulo-banner">
         <h2>Recargas de aire acondicionario electricidad automotriz - scanner</h2>

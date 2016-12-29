@@ -26,37 +26,41 @@ Empresa | SISA
 
     <div class="row">
       <div class="col-md-6">
-        <div class="form-div">
-          <label for="">Nombre</label>
-          <div>
-            <input type="text">
-          </div>
-        </div>
 
-        <div class="form-div">
-          <label for="">Teléfono</label>
-          <div>
-            <input type="text">
+        <form id="form_contacto" action="{{ url('ajax_enviar_contacto') }}" method="post">
+          <div class="form-div">
+            <label for="">Nombre</label>
+            <div>
+              <input type="text" name="nombre">
+            </div>
           </div>
-        </div>
 
-        <div class="form-div">
-          <label for="">Correo</label>
-          <div>
-            <input type="text">
+          <div class="form-div">
+            <label for="">Teléfono</label>
+            <div>
+              <input type="number" name="telefono">
+            </div>
           </div>
-        </div>
 
-        <div class="form-div">
-          <label for="">Mensaje</label>
-          <div>
-            <textarea rows="8"></textarea>
+          <div class="form-div">
+            <label for="">Correo</label>
+            <div>
+              <input type="email" name="correo">
+            </div>
           </div>
-        </div>
 
-        <div class="text-center">
-          <button class="btn-enviar">Enviar</button>
-        </div>
+          <div class="form-div">
+            <label for="">Mensaje</label>
+            <div>
+              <textarea rows="8" name="mensaje"></textarea>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button type="button" class="btn-enviar">Enviar</button>
+          </div>
+        </form>
+
       </div>
       <div class="col-md-6">
         
@@ -87,6 +91,7 @@ Empresa | SISA
 
 <script src="http://maps.google.com/maps/api/js?key=AIzaSyCc6uZiwgDirdfZgc4W41fR5MDs3H02wpk"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.21/gmaps.min.js"></script>
+<script src="{{ absolute_url( asset('js/validate/jquery.validate.js')) }}"></script>
 
 <script src="{{ absolute_url(asset('js/contacto.js')) }}"></script>
 

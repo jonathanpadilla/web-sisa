@@ -42,6 +42,22 @@ class GaleriaController extends Controller
         exit;
     }
 
+    public function eliminarImagenAction(Request $request)
+    {
+        $result = true;
+
+        $id = $request->get('id', false);
+        $em = $this->getDoctrine()->getManager();
+
+        $imagen = $em->getRepository('WebBundle:Imagen')->findOneBy(array('id' => $id ));
+        $imagen->setActivo(0);
+        $em->persist($imagen);
+        $em->flush();
+
+        echo json_encode(array('result' => $result));
+        exit;
+    }
+
     private function subirImagen($foto)
     {
         $result = null;

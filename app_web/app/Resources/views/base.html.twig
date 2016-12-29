@@ -39,6 +39,7 @@
         <script src="{{ absolute_url( asset('js/jquery-3.1.1.min.js')) }}"></script>
         <script src="{{ absolute_url( asset('js/bootstrap.min.js')) }}"></script>
         <script src="{{ absolute_url( asset('js/owl-carousel/owl.carousel.js')) }}"></script>
+        <script src="{{ absolute_url( asset('js/app.js')) }}"></script>
 
         {% if session %}
         <script src="{{ absolute_url(asset('js/admin.js')) }}"></script>
@@ -46,6 +47,17 @@
 
         {% block js %}
         {% endblock %}
+
+        <script>
+            $(function(){
+                $("#btn_fono_head").mouseover(function(){
+                    $(".telefono_hover").css('display', 'inline-block');
+                })
+                .mouseleave(function(){
+                    $(".telefono_hover").css('display', 'none');                    
+                });
+            });
+        </script>
 
     </body>
 </html>

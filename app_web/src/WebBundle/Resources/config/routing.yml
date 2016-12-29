@@ -49,6 +49,21 @@ ajax_subir_imagen_galeria:
     options:
         expose: true
 
+ajax_enviar_contacto:
+    path:     /enviar-contacto/
+    defaults: { _controller: WebBundle:Contacto:enviarContacto }
+    options:
+        expose: true
+
+ajax_eliminar_imagen_galeria:
+    path:     /admin/eliminar-imagen-galeria/
+    defaults: { _controller: WebBundle:Galeria:eliminarImagen }
+    options:
+        expose: true
+
+
+
+
 ajax_guardar_texto:
     path:     /admin/guardar-texto/
     defaults: { _controller: WebBundle:Admin:guardarTexto }

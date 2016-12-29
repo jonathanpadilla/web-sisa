@@ -22,4 +22,24 @@ $(function(){
 				}
 			});
 	});
+
+	$(".btn_eliminar_imagen_galeria").on('click', function(){
+		var btn = $(this);
+		var id = btn.data('id');
+
+		$.ajax({
+			url: Routing.generate('ajax_eliminar_imagen_galeria'),
+			data: {id:id},
+			dataType: 'json',
+			method: 'post'
+		}).done(function(json){
+			if(json.result)
+			{
+				location.reload(true);
+			}
+		});
+
+	});
+
+
 });
