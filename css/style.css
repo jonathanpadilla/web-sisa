@@ -266,6 +266,10 @@ p{
     width: 220px;
 }
 
+.servicio-texto{
+	min-height: 95px;
+}
+
 .servicio-texto h3{
 	color: #fff;
 	margin:0;
@@ -521,7 +525,7 @@ p{
 	}
 
 	.banner{
-		height: 500px;
+		/*height: 500px;*/
 	}
 
 	.banner .content-banner{

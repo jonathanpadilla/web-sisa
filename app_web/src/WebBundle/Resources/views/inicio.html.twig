@@ -28,18 +28,18 @@ Inicio | SISA
     </div>
     <div class="col-md-3 text-center">
       <div class="circulo-imagen">
-        <img src="{{ absolute_url( asset('image/reparacion.png')) }}" alt="reparacion">
+        <img src="{{ absolute_url( asset('image/tick.png')) }}" alt="reparacion">
       </div>
       <div class="circulo-texto">
-        <h3>Reparación y mantención</h3>
+        <h3>Calidad y garantia</h3>
       </div>
     </div>
     <div class="col-md-3 text-center">
       <div class="circulo-imagen">
-        <img src="{{ absolute_url( asset('image/reparacion.png')) }}" alt="reparacion">
+        <img src="{{ absolute_url( asset('image/persona.png')) }}" alt="reparacion">
       </div>
       <div class="circulo-texto">
-        <h3>Reparación y mantención</h3>
+        <h3>Experiencia y conocimiento</h3>
       </div>
     </div>
   </div>
@@ -56,14 +56,16 @@ Inicio | SISA
 
         {% for servicio in lista_servicio %}
         <div class="col-sm-6 col-md-3 text-center">
-          <div class="item-servicio">
-            <div class="servicio-texto">
-              <h3>{{ servicio.titulo }}</h3>
-            </div>
-            <div class="servicio-imagen">
-              <img src="{{ absolute_url( asset('image/uploads/'~servicio.foto)) }}" alt="servicio">
-            </div>
-          </div>
+            <a href="{{ url('web_servicios') }}" style="text-decoration: none;">
+              <div class="item-servicio">
+                <div class="servicio-texto">
+                  <h3>{{ servicio.titulo }}</h3>
+                </div>
+                <div class="servicio-imagen">
+                  <img src="{{ absolute_url( asset('image/uploads/'~servicio.foto)) }}" alt="servicio">
+                </div>
+              </div>
+            </a>
         </div>
         {% endfor %}
 
